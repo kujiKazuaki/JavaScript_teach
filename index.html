@@ -6,23 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-      window.onload = function() {}
+      window.onload = function () {};
     </script>
   </head>
   <body>
-    <div id="app">
-      <h1>test</h1>
-      <p id="msg"></p>
-    </div>
-    <button id="add_btn">追加</button>
+    <input
+      type="button"
+      value="console.clearボタン"
+      onClick="console.clear()"
+    />
 
     <script>
-      const app = document.getElementById("app");
-      let msg = document.getElementById("msg");
+      console.time();
 
-      const template = document.createElement("template");
-      // template.innerHTML = html;
-      console.log(template);
+      // グループ１
+      console.group("group1-メジャー");
+      console.log("hello");
+      console.error("hello");
+      console.warn("hello");
+      console.groupEnd();
+
+      //　グループ２
+      console.group("group2-count");
+      for (let i = 0; i < 10; i++) {
+        console.count(i);
+      }
+      console.groupEnd();
+
+      // グループ３
+      console.group("group3-特殊");
+      const styleContent =
+        "font-size: 20px; background-color: white; color: red; border: 2px solid orange;";
+      console.log("%c hello", styleContent);
+
+      const style =
+        "padding: 0.5em; color: #010101; background-color: #eaf3ff; border-bottom: solid 3px #516ab6;";
+      console.log("%c Hello World", style);
+
+      const parsonal = { name: "kuji", age: 21, hoby: "散歩" };
+      console.table(parsonal);
+      console.groupEnd();
+
+      console.timeEnd();
     </script>
   </body>
 </html>
