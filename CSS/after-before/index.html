@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .news {
+        list-style: none;
+      }
+      .news .new::after {
+        content: "new";
+        margin-left: 5px;
+        color: #fff;
+        background: red;
+        padding: 1px 3px;
+        font-size: 12px;
+      }
+      .news .pdf::after {
+        content: "PDF";
+        margin-left: 5px;
+        color: red;
+        border: 1px solid red;
+        padding: 1px 3px;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="news">
+      <li class="new">お知らせ1番目です</li>
+      <li class="pdf">お知らせ2番目です</li>
+    </ul>
+  </body>
+</html>

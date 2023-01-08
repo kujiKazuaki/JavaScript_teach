@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <title>Vue.js + HTML Drag&Drop</title>
+  </head>
+  <body>
+    <div id="app" class="container mt-5">
+      <h1>{{ message }}</h1>
+      <div class="d-flex justify-content-between bg-dark p-3">
+        <div
+          class="bg-secondary p-2 m-2 w-100"
+          @drop="dropList($event, 'A')"
+          @dragover.prevent
+          @dragenter.prevent
+        >
+          <h2 class="text-light">Category A</h2>
+          <div
+            class="bg-white m-2 p-2"
+            v-for="(list,index) in CategoryA"
+            draggable
+            @dragstart="dragList($event,list.id)"
+          >
+            {{ list.name }}
+          </div>
+        </div>
+        <div
+          class="bg-secondary p-2 m-2 w-100"
+          @drop="dropList($event, 'B')"
+          @dragover.prevent
+          @dragenter.prevent
+        >
+          <h2 class="text-light">Category B</h2>
+          <div
+            class="bg-white m-2 p-2"
+            v-for="(list,index) in CategoryB"
+            draggable
+            @dragstart="dragList($event,list.id)"
+          >
+            {{ list.name }}
+          </div>
+        </div>
+        <div
+          class="bg-secondary p-2 m-2 w-100"
+          @drop="dropList($event, 'C')"
+          @dragover.prevent
+          @dragenter.prevent
+        >
+          <h2 class="text-light">Category C</h2>
+          <div
+            class="bg-white m-2 p-2"
+            v-for="(list,index) in CategoryC"
+            draggable
+            @dragstart="dragList($event,list.id)"
+          >
+            {{ list.name }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

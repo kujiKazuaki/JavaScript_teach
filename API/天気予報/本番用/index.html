@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Fetch JSON</title>
+  </head>
+  <body>
+    <canvas id="stage" width="150" height="150"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
+
+    <script src="main.js"></script>
+    <script>
+      function drawChart(json) {
+        const mydata = {
+          labels: json.daily.time,
+          datasets: [
+            {
+              label: "最高気温",
+              data: json.daily.temperature_2m_max,
+              borderColor: "rgb(192, 75, 75)",
+            },
+            {
+              label: "最低気温",
+              data: json.daily.temperature_2m_min,
+              borderColor: "rgb(75, 75, 192)",
+            },
+          ],
+        };
+
+        new Chart(document.getElementById("stage"), {
+          type: "line",
+          data: mydata,
+        });
+      }
+    </script>
+  </body>
+</html>

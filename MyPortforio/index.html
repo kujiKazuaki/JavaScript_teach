@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>自己紹介</title>
+  </head>
+  <body>
+    <div class="allScreen">
+      <!-- タグの中身を変えてみよう -->
+      <div class="image_Area">
+        <img class="myphoto" src="./images/MyImage.jpg" alt="画像" />
+      </div>
+      <h1 class="name">久慈和輝</h1>
+      <h2 class="subtitle">盛岡大学界隈の米須玄氏</h2>
+
+      <div class="detailIntro">
+        <ul>
+          <li class="univ">大学：盛岡大学</li>
+          <li class="hobby">趣味：カラオケ/スプラトゥーン/散歩</li>
+          <li class="food">飯：オムライス/しょうゆらーめん</li>
+          <li class="sports">趣味(運動)：筋トレ</li>
+          <li class="singer">好きな歌手：DEAMN</li>
+          <li class="saying">好きな言葉：苦あれば楽あり楽あれば苦あり</li>
+          <li class="saying">一言：プログラミング頑張る！</li>
+        </ul>
+      </div>
+
+      <section class="quiz_Area">
+        <h3>100万あったら久慈はどうするか</h3>
+        <div class="quizBtn_Area">
+          <button on:click="oneBtn" id="oneBtn" class="btn">奨学金返す</button>
+          <button on:click="twoBtn" id="twoBtn" class="btn">
+            ギャンブルで増やす
+          </button>
+          <button on:click="threeBtn" id="threeBtn" class="btn">
+            恵まれない子たちに支援
+          </button>
+        </div>
+        <div class="FB_Area">
+          <p id="feedBack" class="feedBack"></p>
+        </div>
+      </section>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

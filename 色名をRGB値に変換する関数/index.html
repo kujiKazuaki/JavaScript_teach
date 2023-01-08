@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>色名をRGB値に変換する関数</title>
+  </head>
+  <body onLoad="init()">
+    <div>
+      <form name="form">
+        color name： <input type="text" size="10" name="cname" value="pink" />　
+        <input type="button" value="RGB変換" onClick="conv()" />　　　
+        <br />
+
+        <canvas
+          width="350"
+          height="40"
+          id="canvas"
+          style="border: 1px solid green"
+        ></canvas>
+      </form>
+      <span id="idc">　　test</span>
+      <br />
+    </div>
+
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
